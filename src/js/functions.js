@@ -60,7 +60,7 @@ export function loopNodesCollectStyles (elements, params) {
       // Get text value
       alert(11);
       debugger;
-      let textNode = tag === 'SELECT'
+      let textNode = tag === 'SELECT' || tag === 'RADIO' || tag === 'CHECKBOX'
         ? document.createTextNode(currentElement.options[currentElement.selectedIndex].text)
         : document.createTextNode(currentElement.value)
       console.log(textNode);
