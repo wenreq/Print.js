@@ -49,7 +49,8 @@ export function loopNodesCollectStyles (elements, params) {
     // Form Printing - check if is element Input
     let tag = currentElement.tagName
     console.log(tag);
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') {
+    debugger;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || tag === 'RADIO' || tag === 'CHECKBOX') {
       // Save style to variable
       let textStyle = collectStyles(currentElement, params)
 
@@ -57,6 +58,8 @@ export function loopNodesCollectStyles (elements, params) {
       let parent = currentElement.parentNode
 
       // Get text value
+      alert(11);
+      debugger;
       let textNode = tag === 'SELECT'
         ? document.createTextNode(currentElement.options[currentElement.selectedIndex].text)
         : document.createTextNode(currentElement.value)
